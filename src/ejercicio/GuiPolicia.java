@@ -13,7 +13,7 @@ public class GuiPolicia extends JFrame {
 	public GuiPolicia() {
 		setLayout(new FlowLayout());
 
-		add(new JLabel("Cédula: "));
+		add(new JLabel("Cï¿½dula: "));
 		cedula = new JTextField(18);
 		add(cedula);
 
@@ -21,7 +21,7 @@ public class GuiPolicia extends JFrame {
 		nombre = new JTextField(18);
 		add(nombre);
 
-		add(new JLabel("Función: "));
+		add(new JLabel("FunciÃ³n: "));
 		funcion = new JTextField(18);
 		add(funcion);
 
@@ -39,7 +39,7 @@ public class GuiPolicia extends JFrame {
 
 		setSize(320, 220);
 		setVisible(true);
-		setTitle("Registrar policía");
+		setTitle("Registrar policï¿½a");
 
 	}
 
@@ -51,7 +51,7 @@ public class GuiPolicia extends JFrame {
 			nombre.setText(null);
 			funcion.setText(null);
 			nivel.setText(null);
-			JOptionPane.showMessageDialog(null, "La información del policía se almacenó correctamente");
+			JOptionPane.showMessageDialog(null, "La informaciÃ³n del policÃ­a se almacenÃ³ correctamente");
 		}
 	}
 

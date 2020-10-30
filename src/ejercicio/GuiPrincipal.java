@@ -1,5 +1,12 @@
 package ejercicio;
-
+/*
+ * Se desea diseñar un programa para almacenar la información de funcionamiento de las comisarías de una región.
+ * 
+ *  En cada comisaría trabaja una serie de polic�as que tienen una cédula, nombre, función y nivel ejecutivo.
+ *  Cada comisaría cuenta con un arsenal de armas. Cada arma está identificada por un código único, y una descripción.
+ *  Implemente las clases de objetos y las interfaces gráficas de usuario necesarias.
+ * 
+ * */
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -26,7 +33,7 @@ public class GuiPrincipal extends JFrame {
 		informes = new JMenu("Informes");
 		barra.add(informes);
 
-		registrarpolicia = new JMenuItem("Registrar Polic�a");
+		registrarpolicia = new JMenuItem("Registrar Policía");
 		registros.add(registrarpolicia);
 		registrarpolicia.addActionListener(new menu1());
 
@@ -34,7 +41,7 @@ public class GuiPrincipal extends JFrame {
 		registros.add(registrararma);
 		registrararma.addActionListener(new menu2());
 
-		registrarcomisaria = new JMenuItem("Registrar comisar�a");
+		registrarcomisaria = new JMenuItem("Registrar comisar�a");
 		registros.add(registrarcomisaria);
 		registrarcomisaria.addActionListener(new menu3());
 
@@ -47,13 +54,13 @@ public class GuiPrincipal extends JFrame {
 		registros.add(asignararma);
 		asignararma.addActionListener(new menu5());
 
-		listarcomisarias = new JMenuItem("Listar comisar�as");
+		listarcomisarias = new JMenuItem("Listar comisar�as");
 		informes.add(listarcomisarias);
 		listarcomisarias.addActionListener(new menu6());
 
 		setSize(1350, 700);
 		setVisible(true);
-		setTitle("Gesti�n de comisar�as");
+		setTitle("Gestión de comisarías");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 	}
 
@@ -95,7 +102,7 @@ public class GuiPrincipal extends JFrame {
 		public void actionPerformed(ActionEvent e) {
 			String cad = "";
 			for (int i = 0; i < GuiComisaria.comisarias.size(); i++) {
-				cad += "Comisar�a " + GuiComisaria.comisarias.get(i).getNombre() + "\n" + GuiComisaria.comisarias.get(i).toString() + "\n";
+				cad += "Comisaría " + GuiComisaria.comisarias.get(i).getNombre() + "\n" + GuiComisaria.comisarias.get(i).toString() + "\n";
 			}
 			JOptionPane.showMessageDialog(null, cad);
 		}

@@ -12,7 +12,7 @@ public class GuiAsignarArma extends JFrame {
 	public GuiAsignarArma() {
 		setLayout(new FlowLayout());
 
-		add(new JLabel("Comisarías: "));
+		add(new JLabel("ComisarÃ­as: "));
 		com = new JComboBox<String>();
 		for (int i = 0; i < GuiComisaria.comisarias.size(); i++)
 			com.addItem(GuiComisaria.comisarias.get(i).getNombre());
@@ -40,7 +40,7 @@ public class GuiAsignarArma extends JFrame {
 					for (int j = 0; j < GuiArma.a.size(); j++)
 						if ((String.valueOf(GuiArma.a.get(j).getCodigo())).equals(armas.getSelectedItem())) {
 							GuiComisaria.comisarias.get(i).setArma(GuiArma.a.get(j));
-							JOptionPane.showMessageDialog(null, "El arma " + GuiArma.a.get(j).getCodigo() + " fué asignada a la comisaría " + com.getSelectedItem());
+							JOptionPane.showMessageDialog(null, "El arma " + GuiArma.a.get(j).getCodigo() + " fuÃ© asignada a la comisarÃ­a " + com.getSelectedItem());
 						}
 		}
 	}

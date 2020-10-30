@@ -27,7 +27,7 @@ public class GuiComisaria extends JFrame {
 
 		setSize(320, 150);
 		setVisible(true);
-		setTitle("Registrar comisaría");
+		setTitle("Registrar comisarï¿½a");
 	}
 
 	class boton1 implements ActionListener {
@@ -35,7 +35,7 @@ public class GuiComisaria extends JFrame {
 			Comisaria com = new Comisaria(nombre.getText());
 			comisarias.add(com);
 			nombre.setText(null);
-			JOptionPane.showMessageDialog(null, "La información de la comisaría se almacenó correctamente");
+			JOptionPane.showMessageDialog(null, "La informaciÃ³n de la comisarÃ­a se almacenÃ³ correctamente");
 		}
 	}
 

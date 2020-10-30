@@ -12,13 +12,13 @@ public class GuiVincularPolicia extends JFrame {
 	public GuiVincularPolicia() {
 		setLayout(new FlowLayout());
 
-		add(new JLabel("Comisarías: "));
+		add(new JLabel("ComisarÃ­as: "));
 		com = new JComboBox<String>();
 		for (int i = 0; i < GuiComisaria.comisarias.size(); i++)
 			com.addItem(GuiComisaria.comisarias.get(i).getNombre());
 		add(com);
 
-		add(new JLabel("Policías: "));
+		add(new JLabel("PolicÃ­as: "));
 		policias = new JComboBox();
 		for (int i = 0; i < GuiPolicia.p.size(); i++)
 			policias.addItem(String.valueOf(GuiPolicia.p.get(i).getCedula()));
@@ -30,7 +30,7 @@ public class GuiVincularPolicia extends JFrame {
 
 		setSize(350, 150);
 		setVisible(true);
-		setTitle("Vincular policía");
+		setTitle("Vincular policÃ­a");
 	}
 
 	class boton1 implements ActionListener {
@@ -40,7 +40,7 @@ public class GuiVincularPolicia extends JFrame {
 					for (int j = 0; j < GuiPolicia.p.size(); j++) {
 						if (String.valueOf(GuiPolicia.p.get(j).getCedula()).equals(policias.getSelectedItem())) {
 							GuiComisaria.comisarias.get(i).setPolicia(GuiPolicia.p.get(j));
-							JOptionPane.showMessageDialog(null, "El policía con cédula " + policias.getSelectedItem() + " fué vinculado a la comisaría " + com.getSelectedItem());
+							JOptionPane.showMessageDialog(null, "El policÃ­a con cÃ©dula " + policias.getSelectedItem() + " fuÃ© vinculado a la comisarÃ­a " + com.getSelectedItem());
 						}
 					}
 				}

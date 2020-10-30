@@ -14,11 +14,11 @@ public class GuiArma extends JFrame {
 	public GuiArma() {
 		setLayout(new FlowLayout());
 
-		add(new JLabel("Código: "));
+		add(new JLabel("Cï¿½digo: "));
 		codigo = new JTextField(18);
 		add(codigo);
 
-		add(new JLabel("Descripción: "));
+		add(new JLabel("DescripciÃ³n: "));
 		descripcion = new JTextArea(3, 18);
 		add(descripcion);
 		guardar = new JButton("Guardar");
@@ -47,7 +47,7 @@ public class GuiArma extends JFrame {
 			a.add(ar);
 			codigo.setText(null);
 			descripcion.setText(null);
-			JOptionPane.showMessageDialog(null, "La información del arma se almacenó correctamente");
+			JOptionPane.showMessageDialog(null, "La informaciÃ³n del arma se almacenÃ³ correctamente");
 		}
 	}
 }
