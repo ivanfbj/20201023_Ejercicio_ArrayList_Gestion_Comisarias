@@ -14,7 +14,7 @@ public class GuiArma extends JFrame {
 	public GuiArma() {
 		setLayout(new FlowLayout());
 
-		add(new JLabel("C�digo: "));
+		add(new JLabel("Código: "));
 		codigo = new JTextField(18);
 		add(codigo);
 
@@ -23,25 +23,25 @@ public class GuiArma extends JFrame {
 		add(descripcion);
 		guardar = new JButton("Guardar");
 		add(guardar);
-		guardar.addActionListener(new boton1());
+		guardar.addActionListener(new AccionGuardar());
 
 		cancelar = new JButton("Cancelar");
 		add(cancelar);
-		cancelar.addActionListener(new boton2());
+		cancelar.addActionListener(new AccionCancelar());
 
 		setSize(320, 180);
 		setVisible(true);
 		setTitle("Registrar arma");
 	}
 
-	class boton2 implements ActionListener {
+	class AccionCancelar implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			codigo.setText(null);
 			descripcion.setText(null);
 		}
 	}
 
-	class boton1 implements ActionListener {
+	class AccionGuardar implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			Arma ar = new Arma(Integer.parseInt(codigo.getText()), descripcion.getText());
 			a.add(ar);

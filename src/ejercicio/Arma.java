@@ -16,7 +16,7 @@ public class Arma {
 
 	@Override
 	public String toString() {
-		return "C�digo=" + codigo + ", Descripción=" + descripcion + "\n";
+		return "Código=" + codigo + ", Descripción=" + descripcion + "\n";
 	}
 
 }

@@ -35,28 +35,28 @@ public class GuiPrincipal extends JFrame {
 
 		registrarpolicia = new JMenuItem("Registrar Policía");
 		registros.add(registrarpolicia);
-		registrarpolicia.addActionListener(new menu1());
+		registrarpolicia.addActionListener(new AccionRegistrarPolica());
 
 		registrararma = new JMenuItem("Registrar arma");
 		registros.add(registrararma);
-		registrararma.addActionListener(new menu2());
+		registrararma.addActionListener(new AccionRegistrarArma());
 
 		registrarcomisaria = new JMenuItem("Registrar comisar�a");
 		registros.add(registrarcomisaria);
-		registrarcomisaria.addActionListener(new menu3());
+		registrarcomisaria.addActionListener(new AccionRegistrarComisaria());
 
 		registros.add(new JSeparator());
 		vincularpolicia = new JMenuItem("Vincular policia");
 		registros.add(vincularpolicia);
-		vincularpolicia.addActionListener(new menu4());
+		vincularpolicia.addActionListener(new AccionVincularPolicia());
 
 		asignararma = new JMenuItem("Asignar arma");
 		registros.add(asignararma);
-		asignararma.addActionListener(new menu5());
+		asignararma.addActionListener(new AccionAsignarArma());
 
-		listarcomisarias = new JMenuItem("Listar comisar�as");
+		listarcomisarias = new JMenuItem("Listar comisarías");
 		informes.add(listarcomisarias);
-		listarcomisarias.addActionListener(new menu6());
+		listarcomisarias.addActionListener(new AccionListarComisarias());
 
 		setSize(1350, 700);
 		setVisible(true);
@@ -68,37 +68,37 @@ public class GuiPrincipal extends JFrame {
 		GuiPrincipal ventana = new GuiPrincipal();
 	}
 
-	class menu1 implements ActionListener {
+	class AccionRegistrarPolica implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			GuiPolicia ventana2 = new GuiPolicia();
 		}
 	}
 
-	class menu2 implements ActionListener {
+	class AccionRegistrarArma implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			GuiArma ventana3 = new GuiArma();
 		}
 	}
 
-	class menu3 implements ActionListener {
+	class AccionRegistrarComisaria implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			GuiComisaria ventana4 = new GuiComisaria();
 		}
 	}
 
-	class menu4 implements ActionListener {
+	class AccionVincularPolicia implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			GuiVincularPolicia ventana5 = new GuiVincularPolicia();
 		}
 	}
 
-	class menu5 implements ActionListener {
+	class AccionAsignarArma implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			GuiAsignarArma ventana6 = new GuiAsignarArma();
 		}
 	}
 
-	class menu6 implements ActionListener {
+	class AccionListarComisarias implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			String cad = "";
 			for (int i = 0; i < GuiComisaria.comisarias.size(); i++) {

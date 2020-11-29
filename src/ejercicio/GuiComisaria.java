@@ -19,18 +19,18 @@ public class GuiComisaria extends JFrame {
 
 		guardar = new JButton("Guardar");
 		add(guardar);
-		guardar.addActionListener(new boton1());
+		guardar.addActionListener(new AccionGuardar());
 
 		cancelar = new JButton("Cancelar");
 		add(cancelar);
-		cancelar.addActionListener(new boton2());
+		cancelar.addActionListener(new AccionCancelar());
 
 		setSize(320, 150);
 		setVisible(true);
 		setTitle("Registrar comisar�a");
 	}
 
-	class boton1 implements ActionListener {
+	class AccionGuardar implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			Comisaria com = new Comisaria(nombre.getText());
 			comisarias.add(com);
@@ -39,7 +39,7 @@ public class GuiComisaria extends JFrame {
 		}
 	}
 
-	class boton2 implements ActionListener {
+	class AccionCancelar implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			nombre.setText(null);
 		}

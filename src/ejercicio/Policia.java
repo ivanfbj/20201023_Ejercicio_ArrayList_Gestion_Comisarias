@@ -20,7 +20,7 @@ public class Policia {
 
 	@Override
 	public String toString() {
-		return "C�dula=" + cedula + ", Nombre=" + nombre + ", Función=" + funcion + ", Nivel ejecutivo=" + nivel + "\n";
+		return "Códula=" + cedula + ", Nombre=" + nombre + ", Función=" + funcion + ", Nivel ejecutivo=" + nivel + "\n";
 	}
 
 }

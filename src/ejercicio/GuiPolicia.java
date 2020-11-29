@@ -13,7 +13,7 @@ public class GuiPolicia extends JFrame {
 	public GuiPolicia() {
 		setLayout(new FlowLayout());
 
-		add(new JLabel("C�dula: "));
+		add(new JLabel("Cédula: "));
 		cedula = new JTextField(18);
 		add(cedula);
 
@@ -31,19 +31,19 @@ public class GuiPolicia extends JFrame {
 
 		guardar = new JButton("Guardar");
 		add(guardar);
-		guardar.addActionListener(new boton1());
+		guardar.addActionListener(new AccionGuardar());
 
 		cancelar = new JButton("Cancelar");
 		add(cancelar);
-		cancelar.addActionListener(new boton2());
+		cancelar.addActionListener(new AccionCancelar());
 
 		setSize(320, 220);
 		setVisible(true);
-		setTitle("Registrar polic�a");
+		setTitle("Registrar policía");
 
 	}
 
-	class boton1 implements ActionListener {
+	class AccionGuardar implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			Policia pol = new Policia(Long.parseLong(cedula.getText()), nombre.getText(), funcion.getText(), nivel.getText());
 			p.add(pol);
@@ -55,7 +55,7 @@ public class GuiPolicia extends JFrame {
 		}
 	}
 
-	class boton2 implements ActionListener {
+	class AccionCancelar implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			cedula.setText(null);
 			nombre.setText(null);
